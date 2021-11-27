@@ -96,24 +96,6 @@ client.connect(err => {
       // console.log(name, email, file);
   })
   
-    // app.post('/addNewDoctor', (req, res) => {
-    //   const file = req.files.file;
-    //   const name = req.body.name;
-    //   const email = req.body.email;
-    //   console.log(name, email, file);
-
-    //   file.mv(`${__dirname}/doctors/${file.name}`, err => {
-    //     if(err) {
-    //       console.log(err);
-    //       return res.status(500).send({msg: 'Failed to upload msg'});
-    //     }
-    //     doctorCollection.insertOne({name, email, img:file.name})
-    //     .then(result => {
-    //       res.send(result)
-    //     })
-    //     // return res.send({name: file.name, path: `/${file.name}`})
-    //   })
-    // })
   
     app.get('/doctors', (req, res) => {
       doctorCollection.find({})
