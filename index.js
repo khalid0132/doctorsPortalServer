@@ -56,7 +56,7 @@ client.connect(err => {
 
       const name = req.body.name;
       const email = req.body.email;
-      // const filePath = `${__dirname}/doctors/${file.name}`;
+      const filePath = `${__dirname}/doctors/${file.name}`;
 
       const newImg = file.data;
       const encImg = newImg.toString('base64');
